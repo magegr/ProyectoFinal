@@ -167,6 +167,6 @@ class __TwigTemplate_54114b65381c2aeee11e48f036128c74 extends Template
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', {link: profiler_url}) }}
 {% endblock %}
-", "@WebProfiler/Profiler/cancel.html.twig", "C:\\Users\\Clases\\Desktop\\DAW2\\ANGULAR\\OpticaAdam\\ProyectoFinal\\Backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\cancel.html.twig");
+", "@WebProfiler/Profiler/cancel.html.twig", "C:\\Users\\Justo\\Desktop\\DWES - Symfony en entorno local\\Repositorio OPTICA ADAM\\ProyectoFinal\\Backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\cancel.html.twig");
     }
 }

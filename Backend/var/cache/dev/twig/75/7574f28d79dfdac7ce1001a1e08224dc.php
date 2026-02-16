@@ -625,6 +625,6 @@ class __TwigTemplate_bed311de45e5b979543500d55e58bf08 extends Template
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\josev\\Desktop\\Clase\\PI\\Back-end\\OpticaAdam\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Justo\\Desktop\\DWES - Symfony en entorno local\\Repositorio OPTICA ADAM\\ProyectoFinal\\Backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

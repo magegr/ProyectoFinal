@@ -1485,6 +1485,6 @@ class __TwigTemplate_4628252edee3e304b25d5870bc63558d extends Template
     Sfjs.loadToolbar('{{ token }}');
 /*]]>*/</script>
 <!-- END of Symfony Web Debug Toolbar -->
-", "@WebProfiler/Profiler/toolbar_js.html.twig", "C:\\Users\\Clases\\Desktop\\DAW2\\ANGULAR\\OpticaAdam\\ProyectoFinal\\Backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_js.html.twig");
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "C:\\Users\\Justo\\Desktop\\DWES - Symfony en entorno local\\Repositorio OPTICA ADAM\\ProyectoFinal\\Backend\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\toolbar_js.html.twig");
     }
 }

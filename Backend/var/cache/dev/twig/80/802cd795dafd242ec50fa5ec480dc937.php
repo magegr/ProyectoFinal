@@ -76,6 +76,7 @@ class __TwigTemplate_4a534ee8178fd0c3a9e3ee06232b0be5 extends Template
         // line 16
         yield "    </body>
 </html>
+
 ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -218,7 +219,7 @@ class __TwigTemplate_4a534ee8178fd0c3a9e3ee06232b0be5 extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  187 => 15,  164 => 11,  153 => 12,  150 => 11,  137 => 10,  126 => 8,  113 => 7,  90 => 5,  77 => 16,  75 => 15,  71 => 13,  69 => 10,  66 => 9,  64 => 7,  59 => 5,  53 => 1,);
+        return array (  188 => 15,  165 => 11,  154 => 12,  151 => 11,  138 => 10,  127 => 8,  114 => 7,  91 => 5,  77 => 16,  75 => 15,  71 => 13,  69 => 10,  66 => 9,  64 => 7,  59 => 5,  53 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -240,6 +241,7 @@ class __TwigTemplate_4a534ee8178fd0c3a9e3ee06232b0be5 extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\josev\\Desktop\\Clase\\PI\\Back-end\\OpticaAdam\\templates\\base.html.twig");
+
+", "base.html.twig", "C:\\Users\\Justo\\Desktop\\DWES - Symfony en entorno local\\Repositorio OPTICA ADAM\\ProyectoFinal\\Backend\\templates\\base.html.twig");
     }
 }

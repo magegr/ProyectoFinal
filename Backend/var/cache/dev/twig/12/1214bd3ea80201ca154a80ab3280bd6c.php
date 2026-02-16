@@ -319,6 +319,6 @@ class __TwigTemplate_47a92d493999b49f8142139c53529887 extends Template
 
     <a href=\"{{ path('app_product_new') }}\">Create new</a>
 {% endblock %}
-", "product/index.html.twig", "C:\\Users\\josev\\Desktop\\Clase\\PI\\Back-end\\OpticaAdam\\templates\\product\\index.html.twig");
+", "product/index.html.twig", "C:\\Users\\Justo\\Desktop\\DWES - Symfony en entorno local\\Repositorio OPTICA ADAM\\ProyectoFinal\\Backend\\templates\\product\\index.html.twig");
     }
 }
