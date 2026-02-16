@@ -1,0 +1,27 @@
+#header-start {
+    background-color: rgb(177, 204, 229);
+    
+}
+
+header h2, header h5 {
+    font-weight: 600;
+}
+
+header a img {
+    scale: calc(2.5);
+    min-width: 45px;
+    padding-bottom: 2px;
+}
+
+nav ul li {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+nav .li-lg {  
+    font-size: 1.2em;
+}
+
+nav .li-sm {
+    font-size: 0.8em;
+}

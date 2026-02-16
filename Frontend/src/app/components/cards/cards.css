@@ -1,0 +1,20 @@
+
+.titulos {
+    color: #3D82F2;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.button {
+    background-color: #0057FF;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3D82F2;
+    transition: 0.3s;
+}
