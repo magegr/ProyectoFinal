@@ -45,7 +45,9 @@
                 <td>{{ product.graduation }}</td>
                 <td>{{ product.duration }}</td>
                 <td>{{ product.diameter }}</td>
-                <td>{{ product.image }}</td>
+                <td>
+                    <img src="{{ asset('uploads/' ~ product.image) }}" alt="Producto">
+                </td>
                 <td>
                     <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
                     <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
