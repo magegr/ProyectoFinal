@@ -64,6 +64,9 @@ class Product
     #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'Relation')]
     private Collection $users;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -265,6 +268,18 @@ class Product
         if ($this->users->removeElement($user)) {
             $user->removeRelation($this);
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }
