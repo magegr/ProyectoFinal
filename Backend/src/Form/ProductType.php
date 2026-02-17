@@ -29,11 +29,11 @@ class ProductType extends AbstractType
             ->add('graduation')
             ->add('duration')
             ->add('diameter')
-            ->add('users', EntityType::class, [
+            /*->add('users', EntityType::class, [
                 'class' => User::class,
                 'choice_label' => 'id',
                 'multiple' => true,
-            ])
+            ])*/
             ->add('image', TextType::class, [
                 'label' => "Nombre de la imagen",
                 'required' => false
