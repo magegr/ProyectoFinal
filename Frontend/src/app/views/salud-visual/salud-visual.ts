@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Carrusel } from '../../components/carrusel/carrusel';
-import { Cards } from '../../components/cards/cards';
 
 @Component({
   selector: 'app-salud-visual',
-  imports: [Carrusel, Cards],
+  imports: [Carrusel],
   templateUrl: './salud-visual.html',
   styleUrl: './salud-visual.css',
 })

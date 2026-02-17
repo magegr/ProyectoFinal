@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-
 @Component({
-  selector: 'app-header',
+  selector: 'app-login',
   imports: [RouterLink, RouterLinkActive],
-  templateUrl: './header.html',
-  styleUrl: './header.css',
+  templateUrl: './login.html',
+  styleUrl: './login.css',
 })
-export class Header {
-  public activo: boolean = true
-  
+export class Login {
+
 }

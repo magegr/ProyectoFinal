@@ -5,6 +5,9 @@ import { Lentillas } from './views/lentillas/lentillas';
 import { Index } from './views/index';
 import { Accesorios } from './views/accesorios/accesorios';
 import { SaludVisual } from './views/salud-visual/salud-visual';
+import { Cita } from './views/cita/cita';
+import { Login } from './views/login/login';
+import { Registro } from './views/registro/registro';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'inicio', pathMatch: 'full' },
@@ -14,4 +17,8 @@ export const routes: Routes = [
     { path: 'inicio', component: Index },
     { path: 'accesoris', component: Accesorios },
     { path: 'salut-visual', component: SaludVisual },
+    { path: 'cita' , component:Cita},
+    { path: 'login' , component:Login},
+    { path: 'registro' , component:Registro}
+
 ];

@@ -1,0 +1,5 @@
+.bg-image{
+ background-image:linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url('../../../../public/ImagenEjemplo.png');
+ /*Crea una capa por encima de la imagen, le estoy diciendo que de color de inicio y de comor de final tenga el mismo , por lo que crea una capa semitranspaernte negra*/
+}
+
