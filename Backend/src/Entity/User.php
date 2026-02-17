@@ -62,6 +62,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __construct()
     {
         $this->Relation = new ArrayCollection();
+        $this->createdAt = new \DateTimeImmutable('now', new \DateTimeZone('Europe/Madrid'));
     }
 
     public function getId(): ?int

@@ -50,6 +50,7 @@ final class ApiProductController extends AbstractController
             'graduation' => $product->getGraduation(),
             'duration' => $product->getDuration(),
             'diameter' => $product->getDiameter(),
+            'image' => $product->getImage() ? '../../public/uploads/' . $product->getImage() : '',
         ]);
     }
 

@@ -16,15 +16,35 @@ security:
             # Ensure dev tools and static assets are always allowed
             pattern: ^/(_profiler|_wdt|assets|build)/
             security: false
-        main:
-            lazy: true
-            provider: app_user_provider
-            form_login:
-                login_path: app_login
-                check_path: app_login
-                enable_csrf: true
-            logout:
-                path: app_logout
+
+        login:
+            pattern: ^/api/login
+            stateless: true
+            json_login:
+                # Ruta donde se envían las credenciales
+                check_path: /api/login_check
+                # Campos del JSON que contienen email y password
+                username_path: email
+                password_path: password
+                # Handlers de Lexik para generar el token
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
+        # Firewall para todas las rutas /api/* (excepto login)
+        api:
+            pattern: ^/api
+            stateless: true
+            jwt: ~  # Activar autenticación JWT
+
+        #main:
+        #    lazy: true
+        #    provider: app_user_provider
+        #    form_login:
+        #       login_path: app_login
+        #        check_path: app_login
+        #        enable_csrf: true
+        #    logout:
+        #        path: app_logout
                 # where to redirect after logout
                 # target: app_any_route
 
@@ -36,8 +56,9 @@ security:
 
     # Note: Only the *first* matching rule is applied
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/api/register, roles: PUBLIC_ACCESS }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
 
 when@test:
     security:
