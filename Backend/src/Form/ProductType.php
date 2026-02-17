@@ -6,6 +6,7 @@ use App\Entity\Product;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -32,6 +33,10 @@ class ProductType extends AbstractType
                 'class' => User::class,
                 'choice_label' => 'id',
                 'multiple' => true,
+            ])
+            ->add('image', TextType::class, [
+                'label' => "Nombre de la imagen",
+                'required' => false
             ])
         ;
     }
