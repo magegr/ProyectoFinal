@@ -24,8 +24,19 @@ final class ApiProductController extends AbstractController
                 'name' => $product->getName(),
                 'price' => $product->getPrice(),
                 'stock' => $product->getStock(),
-                'active' => $product->isActive(),
                 'type' => $product->getType(),
+                'active' => $product->isActive(),
+                'trend' => $product->getTrend(),
+                // IF GAFAS
+                'mount_type' => $product->getMountType(),
+                'material' => $product->getMaterial(),
+                'gender' => $product->getGender(),
+                'color' => $product->getColor(),
+                // ELSE IF LENTILLAS
+                'graduation' => $product->getGraduation(),
+                'duration' => $product->getDuration(),
+                'diameter' => $product->getDiameter(),
+
                 'image' => $product->getImage()
             ];
         }
