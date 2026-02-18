@@ -25,6 +25,7 @@ final class ApiProductController extends AbstractController
                 'price' => $product->getPrice(),
                 'stock' => $product->getStock(),
                 'active' => $product->isActive(),
+                'type' => $product->getType(),
                 'image' => $product->getImage()
             ];
         }
