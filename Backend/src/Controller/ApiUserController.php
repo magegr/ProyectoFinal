@@ -24,8 +24,13 @@ final class ApiUserController extends AbstractController
             $data[] = [
                 'id' => $u->getId(),
                 'email' => $u->getEmail(),
+                'roles' => $u->getRoles(),
                 'name' => $u->getName(),
+                'surname1' => $u->getSurname1(),
+                'surname2' => $u->getSurname2(),
+                'phone' => $u->getPhone(),
                 'active' => $u->isActive(),
+                'createdAt' => $u->getCreatedAt()?->format('Y-m-d H:i:s'),
             ];
         }
 
