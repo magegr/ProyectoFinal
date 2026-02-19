@@ -1,111 +1,108 @@
 <div class="container-fluid min-vh-100 p-0">
-    <div class="row g-0 min-vh-100">
-        <div class="col-12 col-lg-12 d-flex align-items-center justify-content-center p-3 p-md-5 bg-light">
-            <div class="card shadow-sm border-0 rounded-4 w-100 login-card">
-                <div class="card-body p-4 p-md-5">
+  <div class="row g-0 min-vh-100">
+    <div class="col-12 col-lg-12 d-flex align-items-center justify-content-center p-3 p-md-5 bg-light">
+      <div class="card shadow-sm border-0 rounded-4 w-100 login-card">
+        <div class="card-body p-4 p-md-5">
 
-                    <div class="text-center mb-4">
-                        <h1 class="h3 fw-bold mb-1">Bienvenido/a a Òptica Adam</h1>
-                        <p class="text-secondary mb-0">Rellena el formulario para pedir cita</p>
-                    </div>
-                    <form class="needs-validation" novalidate>
-                        <div class="row g-3">
-                            <div class="col-12 col-md-6">
-                                <label for="inputNombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="inputNombre" name="nombre" required
-                                    minlength="2" pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$" placeholder="Ej: María" />
-                                <div class="invalid-feedback">
-                                    Escribe tu nombre (mín. 2 letras, solo letras y espacios).
-                                </div>
-                            </div>
+          <div class="text-center mb-4">
+            <h1 class="h3 fw-bold mb-1">Benvingut/da a Òptica Adam</h1>
+            <p class="text-secondary mb-0">Ompli el formulari per a demanar cita</p>
+          </div>
 
-                            <div class="col-12 col-md-6">
-                                <label for="inputApellidos" class="form-label">Apellidos</label>
-                                <input type="text" class="form-control" id="inputApellidos" name="apellidos" required
-                                    minlength="2" pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$"
-                                    placeholder="Ej: García López" />
-                                <div class="invalid-feedback">
-                                    Escribe tus apellidos (mín. 2 letras, solo letras y espacios).
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row g-3 mt-1 align-items-end">
-                            <div class="col-12 col-md-12">
-                                <fieldset class="border rounded-3 p-3">
-                                    <legend class="float-none w-auto px-2 mb-0 fs-6">¿Primera cita?</legend>
-
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="radio" name="primeraCita" id="citaSi"
-                                            value="si" required />
-                                        <label class="form-check-label" for="citaSi">Sí</label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="primeraCita" id="citaNo"
-                                            value="no" required />
-                                        <label class="form-check-label" for="citaNo">No</label>
-                                    </div>
-
-                                    <div class="invalid-feedback d-block">
-                                        Selecciona una opción.
-                                    </div>
-                                </fieldset>
-                            </div>
-                        </div>
-                         <div class="row g-3 mt-1 align-items-end">
-                             <div class="col-12 col-md-12">
-                                <fieldset class="border rounded-3 p-3">
-                                    <legend class="float-none w-auto px-2 mb-0 fs-6">¿Tipo de cita?</legend>
-
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="radio" name="Tipo" id="citaSi" value="si"
-                                            required />
-                                        <label class="form-check-label" for="citaSi">Revisión</label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Tipo" id="citaNo" value="no"
-                                            required />
-                                        <label class="form-check-label" for="citaNo">Prueba Lentillas</label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Tipo" id="citaNo" value="no"
-                                            required />
-                                        <label class="form-check-label" for="citaNo">Gafas de sol</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Tipo" id="citaNo" value="no"
-                                            required />
-                                        <label class="form-check-label" for="citaNo">Taller</label>
-                                    </div>
-
-                                    <div class="invalid-feedback d-block">
-                                        Selecciona una opción.
-                                    </div>
-                                </fieldset>
-                            </div>
-                            </div>
-                        <div class="row mt-4">
-                            <div class="col-12 d-flex flex-column align-items-center gap-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="invalidCheck" required />
-                                    <label class="form-check-label" for="invalidCheck">
-                                        Acepto términos y condiciones
-                                    </label>
-                                    <div class="invalid-feedback">
-                                        Debes aceptar antes de enviar.
-                                    </div>
-                                </div>
-
-                                <button type="submit" class=" w-50 btn btn-primary px-5">Pedir cita</button>
-                            </div>
-                        </div>
-                    </form>
-
+          <form class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="inputNombre" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="inputNombre" name="nombre" required minlength="2"
+                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$" placeholder="Ex.: Maria" />
+                <div class="invalid-feedback">
+                  Escriu el teu nom (mín. 2 lletres, només lletres i espais).
                 </div>
-            </div>
-        </div>
+              </div>
 
+              <div class="col-12 col-md-6">
+                <label for="inputApellidos" class="form-label">Cognoms</label>
+                <input type="text" class="form-control" id="inputApellidos" name="apellidos" required minlength="2"
+                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$" placeholder="Ex.: García López" />
+                <div class="invalid-feedback">
+                  Escriu els teus cognoms (mín. 2 lletres, només lletres i espais).
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1 align-items-end">
+              <div class="col-12 col-md-12">
+                <fieldset class="border rounded-3 p-3">
+                  <legend class="float-none w-auto px-2 mb-0 fs-6">Primera cita?</legend>
+
+                  <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="primeraCita" id="citaSi" value="si" required />
+                    <label class="form-check-label" for="citaSi">Sí</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="primeraCita" id="citaNo" value="no" required />
+                    <label class="form-check-label" for="citaNo">No</label>
+                  </div>
+
+                  <div class="invalid-feedback d-block">
+                    Selecciona una opció.
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="row g-3 mt-1 align-items-end">
+              <div class="col-12 col-md-12">
+                <fieldset class="border rounded-3 p-3">
+                  <legend class="float-none w-auto px-2 mb-0 fs-6">Tipus de cita?</legend>
+
+                  <div class="form-check mt-2">
+                    <input class="form-check-input" type="radio" name="Tipo" id="citaRevision" value="revision" required />
+                    <label class="form-check-label" for="citaRevision">Revisió</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Tipo" id="citaLentilles" value="lentilles" required />
+                    <label class="form-check-label" for="citaLentilles">Prova de lentilles</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Tipo" id="citaSol" value="sol" required />
+                    <label class="form-check-label" for="citaSol">Ulleres de sol</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Tipo" id="citaTaller" value="taller" required />
+                    <label class="form-check-label" for="citaTaller">Taller</label>
+                  </div>
+
+                  <div class="invalid-feedback d-block">
+                    Selecciona una opció.
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col-12 d-flex flex-column align-items-center gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="invalidCheck" required />
+                  <label class="form-check-label" for="invalidCheck">
+                    Accepte els termes i les condicions
+                  </label>
+                  <div class="invalid-feedback">
+                    Has d’acceptar abans d’enviar.
+                  </div>
+                </div>
+
+                <button type="submit" class="w-50 btn btn-primary px-5">Demanar cita</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
     </div>
+  </div>
 </div>

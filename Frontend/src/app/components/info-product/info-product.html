@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-12 col-md-12">
+    <h1 class="fw-bold mb-2 text-center color">Descripció</h1>
+  </div>
+</div>
+<div class="row g-4 align-items-center">
+  <div class="col-6 col-lg-6 ">
+    <div class="mb-4 border-0">
+      <img class="img-fluid product-img" [src]="'http://localhost:8000/uploads/' + url" [alt]="name" />
+    </div>
+  </div>
+  <div class="col-4 col-lg-3 mb-4 border-0  rounded">
+
+      <div class="">
+        <div class="row">
+          <h2 class="col-md-6 text-start">{{name}}</h2>
+        </div>
+        <div class="row border-bottom">
+          <h3 class="col-md-6 text-start color">{{price}}</h3>
+        </div>
+        <div class="row">
+          <div class="key col-md-6  text-start">Gènere</div>
+          <div class=" col-md-6 text-end">{{ gender ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6  text-start">Marca</div>
+          <div class=" col-md-6 text-end">{{ trend ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6  text-start">Tipus de muntura</div>
+          <div class=" col-md-6 text-end">{{ mount_type ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6  text-start">Material</div>
+          <div class=" col-md-6 text-end">{{ material ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6 text-start">Color</div>
+          <div class=" col-md-6 text-end">{{ color ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6  text-start">Diàmetre</div>
+          <div class=" col-md-6 text-end">{{ diameter ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6  text-start">Stock</div>
+          <div class=" col-md-6 text-end">{{ stock ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6  text-start">Duració</div>
+          <div class=" col-md-6 text-end">{{ duration ?? '-' }}</div>
+        </div>
+
+        <div class="row">
+          <div class="key col-md-6 text-start">Graduació</div>
+          <div class=" col-md-6 text-end">{{ graduation ?? '-' }}</div>
+        </div>
+      </div>
+  </div>

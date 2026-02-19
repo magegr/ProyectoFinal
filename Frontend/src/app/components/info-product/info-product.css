@@ -1,0 +1,16 @@
+.product-img{
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.color {
+  color: #3D82F2;
+}
+
+.key{
+  font-weight: 900;
+  font-size: 17px;
+  color: #11385a;
+}
+

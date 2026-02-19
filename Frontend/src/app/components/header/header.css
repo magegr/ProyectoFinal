@@ -1,5 +1,5 @@
 #header-start {
-    background-color: rgb(177, 204, 229);
+    background-color:#dfeaf6;
 }
 
 header h2 {
@@ -7,9 +7,11 @@ header h2 {
 }
 
 .logo {
- max-width:200px;
- min-width: 30px;
+
+  max-width:200px;
+  min-width: 30px;
   height: auto;
+  scale:7;
 }
 
 .brand-title {

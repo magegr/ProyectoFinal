@@ -7,17 +7,17 @@
       <div class="h-100 d-flex flex-column justify-content-between p-4 text-white position-relative">
         <div class="d-flex align-items-center gap-2 fw-semibold">
           <span class="brand-dot"></span>
-          <span>Òptica Adam</span>
+          <a  routerLink="/inicio" routerLinkActive="active">Òptica Adam</a>
         </div>
 
         <div>
-          <h2 class="display-6 fw-bold lh-1 mb-2">“Ver bien cambia todo.”</h2>
+          <h2 class="display-6 fw-bold lh-1 mb-2">“Vore bé ho canvia tot.”</h2>
           <p class="mb-0 opacity-75">
-            Acceso para clientes: citas, pedidos, revisiones y datos personales.
+            Accés per a clients: cites, comandes, revisions i dades personals.
           </p>
         </div>
 
-        <small class="opacity-75">Revisiones · Lentillas · Gafas · Accesorios</small>
+        <small class="opacity-75">Revisions · Lentilles · Ulleres · Accessoris</small>
       </div>
     </div>
 
@@ -27,8 +27,8 @@
         <div class="card-body p-4 p-md-5">
 
           <div class="text-center mb-4">
-            <h1 class="h3 fw-bold mb-1">Bienvenido/a a Òptica Adam</h1>
-            <p class="text-secondary mb-0">Registrate para continiar</p>
+            <h1 class="h3 fw-bold mb-1">Benvingut/da a Òptica Adam</h1>
+            <p class="text-secondary mb-0">Registra’t per a continuar</p>
           </div>
 
           <form>
@@ -38,44 +38,42 @@
                 type="email"
                 class="form-control"
                 id="email"
-                placeholder="nombre@ejemplo.com"
+                placeholder="nom@exemple.com"
                 formControlName="email"
-               
                 autocomplete="email"
               />
-              <label for="email">Email</label>
+              <label for="email">Correu electrònic</label>
 
               <div class="invalid-feedback">
-                Introduce un email válido.
+                Introdueix un correu electrònic vàlid.
               </div>
             </div>
 
-         
             <div class="form-floating mb-2">
               <input
                 type="password"
                 class="form-control"
                 id="password"
-                placeholder="Contraseña"
+                placeholder="Contrasenya"
                 formControlName="password"
-               
                 autocomplete="current-password"
               />
-              <label for="password">Contraseña</label>
+              <label for="password">Contrasenya</label>
 
               <div class="invalid-feedback">
-                Mínimo 6 caracteres.
+                Mínim 6 caràcters.
               </div>
             </div>
 
             <div class="d-flex justify-content-between align-items-center mb-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember" formControlName="remember">
-                <label class="form-check-label" for="remember">Recordarme</label>
+                <label class="form-check-label" for="remember">Recorda’m</label>
               </div>
             </div>
-            <button class="btn btn-primary w-100 py-2 fw-semibold" type="submit"  >
-              <span >Registrarse</span>
+
+            <button class="btn btn-primary w-100 py-2 fw-semibold" type="submit">
+              <span>Registrar-se</span>
             </button>
           </form>
 

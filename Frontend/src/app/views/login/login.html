@@ -7,17 +7,17 @@
       <div class="h-100 d-flex flex-column justify-content-between p-4 text-white position-relative">
         <div class="d-flex align-items-center gap-2 fw-semibold">
           <span class="brand-dot"></span>
-          <span>Òptica Adam</span>
+          <span><a  routerLink="/inicio" routerLinkActive="active">Òptica Adam</a></span>
         </div>
 
         <div>
-          <h2 class="display-6 fw-bold lh-1 mb-2">“Ver bien cambia todo.”</h2>
+          <h2 class="display-6 fw-bold lh-1 mb-2">“Vore bé ho canvia tot.”</h2>
           <p class="mb-0 opacity-75">
-            Acceso para clientes: citas, pedidos, revisiones y datos personales.
+            Accés per a clients: cites, comandes, revisions i dades personals.
           </p>
         </div>
 
-        <small class="opacity-75">Revisiones · Lentillas · Gafas · Accesorios</small>
+        <small class="opacity-75">Revisions · Lentilles · Ulleres · Accessoris</small>
       </div>
     </div>
 
@@ -27,68 +27,63 @@
         <div class="card-body p-4 p-md-5">
 
           <div class="text-center mb-4">
-            <h1 class="h3 fw-bold mb-1">Bienvenido/a a Òptica Adam</h1>
-            <p class="text-secondary mb-0">Inicia sesión para continuar</p>
+            <h1 class="h3 fw-bold mb-1">Benvingut/da a Òptica Adam</h1>
+            <p class="text-secondary mb-0">Inicia sessió per a continuar</p>
           </div>
 
           <form>
 
-        
-          <div class="form-floating mb-2">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
-    
-  </div>
-         
+            <div class="form-floating mb-2">
+              <label for="exampleInputEmail1">Adreça de correu electrònic</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+            </div>
+
             <div class="form-floating mb-2">
               <input
                 type="password"
                 class="form-control"
                 id="password"
-                placeholder="Contraseña"
+                placeholder="Contrasenya"
                 formControlName="password"
-               
                 autocomplete="current-password"
               />
-              <label for="password">Contraseña</label>
+              <label for="password">Contrasenya</label>
 
               <div class="invalid-feedback">
-                Mínimo 6 caracteres.
+                Mínim 6 caràcters.
               </div>
             </div>
 
             <div class="d-flex justify-content-between align-items-center mb-3">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember" formControlName="remember">
-                <label class="form-check-label" for="remember">Recordarme</label>
+                <label class="form-check-label" for="remember">Recorda’m</label>
               </div>
             </div>
-<div>
-            <a class="link-primary text-decoration-none fw-semibold" routerLink="/recuperar">
-                ¿Olvidaste tu contraseña?
+
+            <div>
+              <a class="link-primary text-decoration-none fw-semibold" routerLink="/recuperar">
+                Has oblidat la contrasenya?
               </a>
             </div>
 
-        
-            <button class="btn btn-primary w-100 py-2 fw-semibold" type="submit" >
-              <span >Entrar</span>
+            <button class="btn btn-primary w-100 py-2 fw-semibold" type="submit">
+              <span>Entrar</span>
             </button>
 
-      
             <div class="d-flex align-items-center gap-3 my-4">
               <div class="flex-grow-1 border-top"></div>
               <small class="text-secondary">o</small>
               <div class="flex-grow-1 border-top"></div>
             </div>
 
-          
             <button type="button" class="btn btn-outline-secondary w-100 py-2 fw-semibold">
-              Continuar con Google
+              Continuar amb Google
             </button>
 
             <p class="text-center text-secondary mt-4 mb-0">
-              ¿No tienes cuenta?
-              <a class="link-primary fw-semibold text-decoration-none" routerLink="/registro" routerLinkActive="active">Crear cuenta</a>
+              No tens compte?
+              <a class="link-primary fw-semibold text-decoration-none" routerLink="/registro" routerLinkActive="active">Crear compte</a>
             </p>
 
           </form>
