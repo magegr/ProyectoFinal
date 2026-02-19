@@ -138,7 +138,7 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `user` VALUES
-(1,'justo2@test.com','[\"ROLE_USER\"]','$2y$13$VqwzQbIVvxiHHTMsuuatpOAMIXylgS1xHqtTo1R4MLsqgrXg5DKqi','Justo2','Fernández',NULL,NULL,1,'2026-02-18 10:05:16');
+(1,'magegr@alumnatflorida.es','[\"ROLE_USER\"]','$2y$13$VqwzQbIVvxiHHTMsuuatpOAMIXylgS1xHqtTo1R4MLsqgrXg5DKqi','Maria','Genis',NULL,NULL,1,'2026-02-18 10:05:16');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -181,4 +181,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-02-19 15:16:41
+-- Dump completed on 2026-02-19 16:21:55

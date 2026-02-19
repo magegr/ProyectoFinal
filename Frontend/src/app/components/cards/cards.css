@@ -14,6 +14,9 @@
     background-color: #3D82F2;
     transition: 0.3s;
 }
+.card{
+     height: 400px;
+}
 
 .card-img-top{
 

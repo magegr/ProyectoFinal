@@ -15,4 +15,9 @@ export class RequestClients {
 
   // }
 
+  public getClient():Observable<User>{
+  return this.http.post<User>("http://localhost:8000/api/user")
+
+  }
+
 }

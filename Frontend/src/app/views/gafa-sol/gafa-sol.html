@@ -1,15 +1,31 @@
 <main>
    <section>
+      @if(!activo){
       <article>
          <app-carrusel></app-carrusel>
       </article>
-      <article>
+      <article class="mb-5">
          <div class="container mt-5">
-             <h1 class=" mb-4">Catàleg de <samp class="titulos">ulleres de sol</samp></h1>
+            <h1 class="mb-4">Catàleg de <samp class="titulos">ulleres de sol</samp></h1>
             <div class="row">
-               <app-cards></app-cards>
+               @for (dato of info ; track dato ){
+               <div class="col-12 col-md-4 col-lg-3">
+                  <app-cards [name]="dato.name" [url]="dato.image" [price]="dato.price"
+                     (showInfo)="onClick(dato.id)"></app-cards>
+               </div>
+               }
             </div>
-          </div>
+         </div>
       </article>
+      }@else {
+      <article class="mb-5">
+         <div class="container mt-5">
+            <button class="btn btn-link p-0 text-decoration-none" (click)="retorn()">Volver</button>
+            @if (infoId) {
+            <app-info-product [url]="infoId.image" [name]="infoId.name" [price]="infoId.price" [gender]="infoId.gender" [trend]="infoId.trend" [mount_type]="infoId.mount_type" [material]="infoId.material" [color]="infoId.color" [diameter]="infoId.diameter" [stock]="infoId.stock" [duration]="infoId.duration" [graduation]="infoId.graduation"></app-info-product>
+            }
+         </div>
+      </article>
+      }
    </section>
 </main>

@@ -12,7 +12,5 @@ export class RequestProducts {
 
   public getProduct():Observable<Products[]>{
     return this.http.get<Products[]>("http://localhost:8000/api/product")
- }
-
-  
+  }
 }
