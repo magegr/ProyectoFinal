@@ -49,7 +49,7 @@ final class AuthController extends AbstractController
         if (isset($data['phone'])) {
             $user->setPhone($data['phone']);
         }
-        $user->setActive((bool) $data['active']);
+        $user->setActive(true);
 
         $em->persist($user);
         $em->flush();

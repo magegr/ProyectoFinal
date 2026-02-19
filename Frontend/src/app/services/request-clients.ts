@@ -10,8 +10,8 @@ export class RequestClients {
   private apiUrl = 'http://localhost:8000/api';
 
   // Registro de usuario
-  register(email: string, password: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, { email, password });
+  register(name:string , surname1:string, surname2:string|null , phone:string|null, email: string, password: string): Observable<any> {
+    return this.http.post(`${this.apiUrl}/register`, { name , surname1 , surname2 , phone , email, password });
   }
 
   // Login - devuelve el token
