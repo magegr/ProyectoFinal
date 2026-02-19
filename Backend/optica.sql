@@ -83,11 +83,11 @@ LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `product` VALUES
-(1,'Air Optix','-',10,5,'lentilla',1,'Ciba Vision',NULL,NULL,NULL,NULL,'2','diaria',1.5,'lentilla1.jpg'),
-(2,'Total 30','-',10,4,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'3','mensual',1.5,'lentilla2.jpg'),
-(3,'Lens 55','-',22,5,'lentilla',1,'Lens 55',NULL,NULL,NULL,NULL,'2','diaria',1.5,'lentilla3.jpg'),
-(4,'Air Toric','-',20,6,'lentilla',1,'UGO',NULL,NULL,NULL,NULL,'4','mensual',2,'lentilla4.jpg'),
-(5,'Air Optix Colors','-',25,2,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'2','diaria',1,'lentilla5.jpg'),
+(1,'Air Optix Aqua','Lentillas mensuales cómodas y transpirables, con 33% de agua. Seis unidades.',25,5,'lentilla',1,'Ciba Vision',NULL,NULL,NULL,NULL,'2','mensual',14.5,'lentilla1.jpg'),
+(2,'Total 30','Lentillas mensuales con tecnología Water Gradient para una comodidad suave y alta transpirabilidad, además de protección UV. Seis unidades.',25,4,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'3','mensual',14.5,'lentilla2.jpg'),
+(3,'Lens 55','Lentillas mensuales para corregir astigmatismo. Cómodas, transpirables y con protección UV. Tres unidades.',21,5,'lentilla',1,'Lens 55',NULL,NULL,NULL,NULL,'2','mensual',13.5,'lentilla3.jpg'),
+(4,'Air Toric','Lentillas mensuales para astigmatismo con alto nivel de oxígeno, suaves y transpirables. Seis unidades.',20,6,'lentilla',1,'UGO',NULL,NULL,NULL,NULL,'4','mensual',14.5,'lentilla4.jpg'),
+(5,'Air Optix Colors','Lentillas de colores mensuales para realzar el color de tus ojos. Cómodas y transpirables. Dos unidades.',22,2,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'2','mensual',14,'lentilla5.jpg'),
 (6,'Gafas Hugo Boss acetato transparente','Montura óptica Hugo Boss de estilo elegante fabricada en acetato translúcido color beige. Diseño rectangular moderno, ligero y cómodo para uso diario. Compatible con lentes graduadas.',200,20,'graduadas',1,'Hugo Boss','completa','acetato','unisex','beige transparente',NULL,NULL,NULL,'graduada1.png'),
 (7,'Gafas Tommy Hilfiger negras rectangulares','Montura óptica Tommy Hilfiger de diseño rectangular en color negro. Estilo clásico y elegante fabricado en acetato ligero, ideal para uso diario y compatible con lentes graduadas.',179,10,'graduadas',1,'Tommy Hilfiger','completa','acetato','unisex','negro',NULL,NULL,NULL,'graduada2.png'),
 (8,'Gafas Zadig & Voltaire redondas negras','Montura óptica Zadig & Voltaire de forma redonda en color negro. Diseño moderno y sofisticado fabricado en acetato ligero, cómodo para uso diario y compatible con lentes graduadas.',189,30,'graduadas',1,'Zadig & Voltaire','completa','acetato','unisex','negro',NULL,NULL,NULL,'graduada3.png'),
@@ -181,4 +181,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-02-19 11:45:35
+-- Dump completed on 2026-02-19 15:16:41
