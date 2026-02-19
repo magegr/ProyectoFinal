@@ -45,8 +45,9 @@ final class ApiProductController extends AbstractController
     }
 
     #[Route('/{id}', methods: ['GET'], name: 'show')]
-    public function show(Product $product): JsonResponse
+    public function show(Product $product, Request $request): JsonResponse
     {
+        $baseUrl = $request->getSchemeAndHttpHost();
         return $this->json([
             'id' => $product->getId(),
             'name' => $product->getName(),
@@ -66,7 +67,7 @@ final class ApiProductController extends AbstractController
             'duration' => $product->getDuration(),
             'diameter' => $product->getDiameter(),
 
-            'image' => $product->getImage() ? '../../public/uploads/' . $product->getImage() : '',
+            'image' => $product->getImage() ? $baseUrl . '/uploads/' . $product->getImage() : '',
         ]);
     }
 
