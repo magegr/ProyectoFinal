@@ -1,9 +1,9 @@
 /*M!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19-12.1.2-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19-11.8.5-MariaDB, for debian-linux-gnu (aarch64)
 --
 -- Host: localhost    Database: OpticaAdam
 -- ------------------------------------------------------
--- Server version	12.1.2-MariaDB-ubu2404
+-- Server version	11.8.5-MariaDB-ubu2404
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -72,7 +72,7 @@ CREATE TABLE `product` (
   `diameter` double DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +87,18 @@ INSERT INTO `product` VALUES
 (2,'Total 30','-',10,4,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'3','mensual',1.5,'lentilla2.jpg'),
 (3,'Lens 55','-',22,5,'lentilla',1,'Lens 55',NULL,NULL,NULL,NULL,'2','diaria',1.5,'lentilla3.jpg'),
 (4,'Air Toric','-',20,6,'lentilla',1,'UGO',NULL,NULL,NULL,NULL,'4','mensual',2,'lentilla4.jpg'),
-(5,'Air Optix Colors','-',25,2,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'2','diaria',1,'lentilla5.jpg');
+(5,'Air Optix Colors','-',25,2,'lentilla',1,'Alcon',NULL,NULL,NULL,NULL,'2','diaria',1,'lentilla5.jpg'),
+(6,'Gafas Hugo Boss acetato transparente','Montura óptica Hugo Boss de estilo elegante fabricada en acetato translúcido color beige. Diseño rectangular moderno, ligero y cómodo para uso diario. Compatible con lentes graduadas.',200,20,'graduadas',1,'Hugo Boss','completa','acetato','unisex','beige transparente',NULL,NULL,NULL,'graduada1.png'),
+(7,'Gafas Tommy Hilfiger negras rectangulares','Montura óptica Tommy Hilfiger de diseño rectangular en color negro. Estilo clásico y elegante fabricado en acetato ligero, ideal para uso diario y compatible con lentes graduadas.',179,10,'graduadas',1,'Tommy Hilfiger','completa','acetato','unisex','negro',NULL,NULL,NULL,'graduada2.png'),
+(8,'Gafas Zadig & Voltaire redondas negras','Montura óptica Zadig & Voltaire de forma redonda en color negro. Diseño moderno y sofisticado fabricado en acetato ligero, cómodo para uso diario y compatible con lentes graduadas.',189,30,'graduadas',1,'Zadig & Voltaire','completa','acetato','unisex','negro',NULL,NULL,NULL,'graduada3.png'),
+(9,'Gafas Hugo metal dorado aviador','Montura óptica HUGO de estilo aviador cuadrado fabricada en metal dorado. Diseño ligero y elegante con plaquetas nasales ajustables, ideal para uso diario y compatible con lentes graduadas.',209,17,'graduadas',1,'Hugo','completa','metal','unisex','dorado',NULL,NULL,NULL,'graduada4.png'),
+(10,'Gafas Tous negras redondeadas','Montura óptica TOUS de forma redondeada en color negro. Diseño elegante y ligero fabricado en acetato, cómodo para uso diario y compatible con lentes graduadas.',169,22,'graduadas',1,'Tous','completa','acetato','mujer','negro',NULL,NULL,NULL,'graduada5.png'),
+(11,'Gafas Tous carey cat-eye','Montura óptica TOUS de estilo cat-eye en color carey marrón. Diseño femenino y elegante fabricado en acetato ligero, ideal para uso diario y compatible con lentes graduadas.',179,9,'graduadas',1,'Tous','completa','acetato','mujer','beige transparente',NULL,NULL,NULL,'graduada6.png'),
+(12,'Gafas de sol negras oversize','Gafas de sol de diseño oversize cuadrado en color negro. Montura ligera y moderna con lentes degradadas que ofrecen protección solar y estilo para uso diario.',150,20,'sol',1,'Fashion','completa','acetato','mujer','negro',NULL,NULL,NULL,'sol1.png'),
+(13,'Gafas de sol metal dorado degradadas','Gafas de sol de diseño elegante con montura metálica dorada y lentes degradadas. Modelo ligero y cómodo ideal para uso diario con protección solar y estilo moderno.',159,22,'sol',1,'Classic',NULL,'metal','unisex','dorado',NULL,NULL,NULL,'sol2.png'),
+(14,'Gafas de sol negras cuadradas oversize','Gafas de sol de diseño cuadrado oversize en color negro con montura gruesa de acetato y lentes degradadas. Modelo moderno y elegante ideal para protección solar diaria con estilo.',159,4,'sol',1,'Fashion','completa','acetato','mujer','negro',NULL,NULL,NULL,'sol3.png'),
+(15,'Gafas de sol ovaladas verdes retro','Gafas de sol de estilo retro con montura metálica fina y lentes verdes. Diseño ligero y elegante inspirado en el estilo vintage, ideal para uso diario con protección solar.',139,20,'sol',1,'Vintage','completa','metal','unisex','dorado',NULL,NULL,NULL,'sol4.png'),
+(16,'Gafas de sol ovaladas degradadas marrón','Gafas de sol de inspiración vintage con montura metálica dorada y lentes degradadas en tono marrón. Diseño sofisticado y ligero ideal para un look elegante diario con protección solar.',149,22,'sol',1,'Elegante','completa','metal','unisex','dorado',NULL,NULL,NULL,'sol5.png');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -166,4 +177,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-02-18 10:15:29
+-- Dump completed on 2026-02-19 10:36:01
