@@ -6,6 +6,17 @@ info:
 http:
   method: POST
   url: http://localhost:8000/api/register
+  body:
+    type: json
+    data: |-
+      {
+        "name":"maria",
+        "surname1":"maria",
+        "surname2":"",
+        "phone":"",
+        "email":"prueba@gmail.com",
+        "password":"123456"
+      }
   auth: inherit
 
 settings:

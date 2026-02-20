@@ -31,7 +31,7 @@
             <p class="text-secondary mb-0">Registra’t per a continuar</p>
           </div>
 
-          <form class="needs-validation" (ngSubmit)="onSubmit($event)" novalidate>
+          <form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit($event)" novalidate>
 
             <div class="form-floating mb-3">
               <input

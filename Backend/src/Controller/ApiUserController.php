@@ -7,13 +7,36 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Attribute\Route;
 
 #[Route('/api/user', name: 'api_user_')]
 final class ApiUserController extends AbstractController
 {
+    //prueba
+    #[Route('/me', methods: ['GET'], name: 'me')]
+    public function me(): JsonResponse
+    {
+        $user = $this->getUser();
 
+        if (!$user instanceof User) {
+            return new JsonResponse(['error' => 'No autenticado'], Response::HTTP_UNAUTHORIZED);
+        }
+
+        return $this->json([
+            'id' => $user->getId(),
+            'email' => $user->getEmail(),
+            'roles' => $user->getRoles(),
+            'name' => $user->getName(),
+            'surname1' => $user->getSurname1(),
+            'surname2' => $user->getSurname2(),
+            'phone' => $user->getPhone(),
+            'active' => $user->isActive(),
+            'createdAt' => $user->getCreatedAt()?->format(\DateTimeInterface::ATOM),
+        ]);
+    }
+//
     #[Route('', methods: ['GET'], name: 'list')]
     public function list(EntityManagerInterface $em): JsonResponse
     {

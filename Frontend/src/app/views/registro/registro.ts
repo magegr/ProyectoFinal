@@ -34,7 +34,7 @@ export class Registro {
 
     form.classList.add('was-validated')
 
-
+    console.log(this.form)
 
     let info = this.form.getRawValue();
 
