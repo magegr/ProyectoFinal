@@ -29,7 +29,7 @@ class Appointment
     private ?string $type = null;
 
     #[ORM\Column]
-    private ?bool $acceptedTerms = null;
+    private ?bool $agreeTerms = null;
 
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     private ?User $user = null;
@@ -99,14 +99,14 @@ class Appointment
         return $this;
     }
 
-    public function isAcceptedTerms(): ?bool
+    public function isAgreeTerms(): ?bool
     {
-        return $this->acceptedTerms;
+        return $this->agreeTerms;
     }
 
-    public function setAcceptedTerms(bool $acceptedTerms): static
+    public function setAgreeTerms(bool $agreeTerms): static
     {
-        $this->acceptedTerms = $acceptedTerms;
+        $this->agreeTerms = $agreeTerms;
 
         return $this;
     }
