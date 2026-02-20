@@ -6,6 +6,7 @@ use App\Entity\Product;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -14,22 +15,26 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email')
-            ->add('roles')
-            ->add('password')
             ->add('name')
             ->add('surname1')
             ->add('surname2')
+            ->add('email')
+            ->add('roles', ChoiceType::class, [
+                'choices' => [
+                    'Usuario' => 'ROLE_USER',
+                    'Administrador' => 'ROLE_ADMIN',
+                ],
+                'multiple' => true,
+                'expanded' => true
+            ])
+            ->add('password')
             ->add('phone')
             ->add('active')
-            ->add('createdAt', null, [
-                'widget' => 'single_text'
-            ])
-            ->add('Relation', EntityType::class, [
+            /*->add('Relation', EntityType::class, [
                 'class' => Product::class,
                 'choice_label' => 'id',
                 'multiple' => true,
-            ])
+            ])*/
         ;
     }
 
