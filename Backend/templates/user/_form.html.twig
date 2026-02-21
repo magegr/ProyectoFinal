@@ -1,4 +1,54 @@
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+
+<section class=" p-4 bg-white rounded-3 shadow-sm">
+        <div class="row p-2 g-3">
+            <div class="col-12 col-md-6">
+                {{ form_row(form.email, { label: 'Email' }) }}
+            </div>
+
+            <div class="col-12 col-md-6">
+                {{ form_row(form.phone, { label: 'Teléfono' }) }}
+            </div>
+        </div>
+        <div class="row p-2 g-3">
+            <div class="col-12 col-md-6">
+                {{ form_row(form.name, { label: 'Nombre' }) }}
+            </div>
+
+            <div class="col-12 col-md-6">
+                {{ form_row(form.surname1, { label: 'Apellido 1' }) }}
+            </div>
+        </div>
+        <div class="row p-2 g-3">
+            <div class="col-12 col-md-6">
+                {{ form_row(form.surname2, { label: 'Apellido 2' }) }}
+            </div>
+            <div class="col-12 col-md-6">
+                {{ form_row(form.password, { label: 'Contraseña' }) }}
+            </div>
+        </div>
+        <div class="row p-2 g-3">
+            <div class="col-6">
+                {{ form_row(form.roles, { label: 'Roles' }) }}
+            </div>
+
+            <div class="col-6">
+                {{ form_row(form.active, { label: 'Activo' }) }}
+            </div>
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+            <button class="btn btn-primary">
+                {{ button_label|default('Guardar') }}
+            </button>
+
+        </div>
+</section>
+
+{% if form._token is defined %}
+    {{ form_row(form._token) }}
+{% endif %}
+
 {{ form_end(form) }}

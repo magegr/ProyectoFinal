@@ -16,7 +16,7 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email')
-          //  ->add('roles') de este
+            // normalmente no se puede editar la contraseña de un usuario
             ->add('password')
             ->add('name')
             ->add('surname1')
@@ -30,9 +30,9 @@ class UserType extends AbstractType
                 'multiple' => true,
                 'expanded' => true
             ])
-            ->add('password')
             ->add('phone')
             ->add('active')
+
             /*->add('Relation', EntityType::class, [
                 'class' => Product::class,
                 'choice_label' => 'id',

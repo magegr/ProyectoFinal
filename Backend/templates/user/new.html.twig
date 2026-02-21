@@ -3,9 +3,21 @@
 {% block title %}New User{% endblock %}
 
 {% block body %}
-    <h1>Create new User</h1>
+<div class="container container-fluid">
+    <header class="mb-3 mt-5">
+        <h1 class="">Usuarios</h1>
+        <p class="mb-0 text-body-secondary">Creacion de usuario</p>
+    </header>
+    <a href="{{ path('app_user_index') }}"
+       class="btn btn-link text-decoration-none"
+       aria-label="Volver al listado">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H3.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L3.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+        </svg>
+        <span class="visually-hidden">Back to list</span>
+    </a>
+
 
     {{ include('user/_form.html.twig') }}
 
-    <a href="{{ path('app_user_index') }}">back to list</a>
 {% endblock %}

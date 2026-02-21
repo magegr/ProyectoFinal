@@ -27,24 +27,34 @@
     <main class="container py-4">
         <header class="d-flex flex-wrap align-items-center justify-content-between mb-3">
             <div>
+
                 <h1 class="h3 mb-1 title">Usuarios</h1>
+                <a href="{{ path('app_main') }}"
+                   class="btn btn-link text-decoration-none"
+                   aria-label="Volver al menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H3.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L3.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+                    </svg>
+                    <span class="visually-hidden">Back to menu</span>
+                </a>
                 <p class="mb-0 text-body-secondary">Listado de usuarios registrados</p>
+
             </div>
 
             <nav class="d-flex gap-2">
+
                 <a class="btn btn-primary" href="{{ path('app_user_new') }}">
                     Crear usuario
                 </a>
             </nav>
         </header>
 
-        <section class="card shadow-sm">
-            <div class="card-body">
+        <section class="shadow-sm">
+            <div class="p-3 rounded-3 bg-white">
                 <div class="table-responsive">
                     <table class="table table-hover align-center mb-0">
                         <thead class="table-light">
                         <tr class="text-center">
-                            <th>Id</th>
                             <th>Email</th>
                             <th>Roles</th>
                             <th>Nombre</th>
@@ -60,7 +70,6 @@
                         <tbody class="text-center">
                         {% for user in users %}
                             <tr>
-                                <td class="opacidad">{{ user.id }}</td>
 
                                 <td class="text-start">
                                     <span class="fw-semibold">{{ user.email }}</span>

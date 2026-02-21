@@ -1,56 +1,67 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Product index{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+<style>
 
+</style>
+{% endblock %}
 {% block body %}
-    <h1>Product index</h1>
+<main class="container py-4">
+    <header class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+        <div>
 
+            <h1 class="h3 mb-1 title">Productos</h1>
+            <a href="{{ path('app_main') }}"
+               class="btn btn-link text-decoration-none"
+               aria-label="Volver al menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H3.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L3.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+                </svg>
+                <span class="visually-hidden">Back to menu</span>
+            </a>
+            <p class="mb-0 text-body-secondary">Listado de productos</p>
+
+        </div>
+
+        <nav class="d-flex gap-2">
+
+            <a class="btn btn-primary" href="{{ path('app_product_new') }}">
+                Nuevo producto
+            </a>
+        </nav>
+    </header>
+    <section class="shadow-sm">
+    <div class="p-3 rounded-3 bg-white">
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>Image</th>
                 <th>Name</th>
-                <th>Description</th>
                 <th>Price</th>
                 <th>Stock</th>
                 <th>Type</th>
                 <th>Active</th>
                 <th>Trend</th>
-                <th>Mount_type</th>
-                <th>Material</th>
-                <th>Gender</th>
-                <th>Color</th>
-                <th>Graduation</th>
-                <th>Duration</th>
-                <th>Diameter</th>
-                <th>actions</th>
-                <th>Image</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
         {% for product in products %}
             <tr>
-                <td>{{ product.id }}</td>
+                <td>
+                    <img style="width: 64px; height: 48px; object-fit: cover;" src="{{ asset('uploads/' ~ product.image) }}" alt="Producto">
+                </td>
                 <td>{{ product.name }}</td>
-                <td>{{ product.description }}</td>
                 <td>{{ product.price }}</td>
                 <td>{{ product.stock }}</td>
                 <td>{{ product.type }}</td>
                 <td>{{ product.active ? 'Yes' : 'No' }}</td>
                 <td>{{ product.trend }}</td>
-                <td>{{ product.mountType }}</td>
-                <td>{{ product.material }}</td>
-                <td>{{ product.gender }}</td>
-                <td>{{ product.color }}</td>
-                <td>{{ product.graduation }}</td>
-                <td>{{ product.duration }}</td>
-                <td>{{ product.diameter }}</td>
                 <td>
-                    <img src="{{ asset('uploads/' ~ product.image) }}" alt="Producto">
-                </td>
-                <td>
-                    <a href="{{ path('app_product_show', {'id': product.id}) }}">show</a>
-                    <a href="{{ path('app_product_edit', {'id': product.id}) }}">edit</a>
+                    <a class="btn btn-outline-secondary" href="{{ path('app_product_show', {'id': product.id}) }}">Ver</a>
+                    <a class="btn btn-outline-primary" href="{{ path('app_product_edit', {'id': product.id}) }}">Editar</a>
                 </td>
             </tr>
         {% else %}
@@ -60,6 +71,7 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('app_product_new') }}">Create new</a>
+    </div>
+        </section>
+</main>
 {% endblock %}
