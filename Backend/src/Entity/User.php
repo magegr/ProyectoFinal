@@ -59,10 +59,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToMany(targetEntity: Product::class, inversedBy: 'users')]
     private Collection $Relation;
 
+    /**
+     * @var Collection<int, Appointment>
+     */
+    #[ORM\OneToMany(targetEntity: Appointment::class, mappedBy: 'user')]
+    private Collection $appointments;
+
     public function __construct()
     {
         $this->Relation = new ArrayCollection();
         $this->createdAt = new \DateTimeImmutable('now', new \DateTimeZone('Europe/Madrid'));
+        $this->appointments = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -238,6 +245,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function removeRelation(Product $relation): static
     {
         $this->Relation->removeElement($relation);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Appointment>
+     */
+    public function getAppointments(): Collection
+    {
+        return $this->appointments;
+    }
+
+    public function addAppointment(Appointment $appointment): static
+    {
+        if (!$this->appointments->contains($appointment)) {
+            $this->appointments->add($appointment);
+            $appointment->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAppointment(Appointment $appointment): static
+    {
+        if ($this->appointments->removeElement($appointment)) {
+            // set the owning side to null (unless already changed)
+            if ($appointment->getUser() === $this) {
+                $appointment->setUser(null);
+            }
+        }
 
         return $this;
     }

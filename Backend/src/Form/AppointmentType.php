@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\Product;
+use App\Entity\Appointment;
 use App\Entity\User;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -10,33 +10,33 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class UserType extends AbstractType
+class AppointmentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('email')
-          //  ->add('roles') de este
-            ->add('password')
             ->add('name')
             ->add('surname1')
             ->add('surname2')
-            ->add('email')
-            ->add('roles', ChoiceType::class, [
+            ->add('firstTime', ChoiceType::class, [
                 'choices' => [
-                    'Usuario' => 'ROLE_USER',
-                    'Administrador' => 'ROLE_ADMIN',
+                    'Sí' => true,
+                    'No' => false
                 ],
-                'multiple' => true,
                 'expanded' => true
             ])
-            ->add('password')
-            ->add('phone')
-            ->add('active')
-            /*->add('Relation', EntityType::class, [
-                'class' => Product::class,
+            ->add('type', ChoiceType::class, [
+                'choices' => [
+                    'Revisió' => 'revision',
+                    'Prova de lents de contacte' => 'prueba',
+                    'Ulleres de sol' => 'sol',
+                    'Taller' => 'taller'
+                ]
+            ])
+            ->add('agreeTerms')
+            /*->add('user', EntityType::class, [
+                'class' => User::class,
                 'choice_label' => 'id',
-                'multiple' => true,
             ])*/
         ;
     }
@@ -44,7 +44,7 @@ class UserType extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => User::class,
+            'data_class' => Appointment::class,
         ]);
     }
 }

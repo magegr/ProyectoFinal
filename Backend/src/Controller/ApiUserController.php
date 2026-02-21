@@ -24,6 +24,20 @@ final class ApiUserController extends AbstractController
             return new JsonResponse(['error' => 'No autenticado'], Response::HTTP_UNAUTHORIZED);
         }
 
+        $appointments = [];
+
+        foreach($user->getAppointments() as $appointment){
+            $appointments[] = [
+                'id' => $appointment->getId(),
+                'name' => $appointment->getName(),
+                'surname1' => $appointment->getSurname1(),
+                'surname2' => $appointment->getSurname2(),
+                'firstTime' => $appointment->isFirstTime(),
+                'type' => $appointment->getType(),
+                'agreeTerms' => $appointment->isAgreeTerms(),
+            ];
+        }
+
         return $this->json([
             'id' => $user->getId(),
             'email' => $user->getEmail(),
@@ -34,6 +48,7 @@ final class ApiUserController extends AbstractController
             'phone' => $user->getPhone(),
             'active' => $user->isActive(),
             'createdAt' => $user->getCreatedAt()?->format(\DateTimeInterface::ATOM),
+            'appointments' => $appointments
         ]);
     }
 //
