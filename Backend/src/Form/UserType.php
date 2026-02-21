@@ -15,7 +15,7 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('roles')
+          //  ->add('roles') de este
             ->add('password')
             ->add('name')
             ->add('surname1')
@@ -25,9 +25,9 @@ class UserType extends AbstractType
             ->add('createdAt', null, [
                 'widget' => 'single_text'
             ])
-            ->add('Relation', EntityType::class, [
-                'class' => Product::class,
-                'choice_label' => 'id',
+            ->add('Relation', EntityType::class, [ //de este
+              'class' => Product::class,
+                'choice_label' => 'name',
                 'multiple' => true,
             ])
         ;
