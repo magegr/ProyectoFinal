@@ -3,8 +3,32 @@
 {% block title %}Appointment{% endblock %}
 
 {% block body %}
-    <h1>Appointment</h1>
+<div class="container py-4">
+    <header class="d-flex flex-wrap align-items-center justify-content-between mb-3">
+        <div>
 
+            <h1 class="h3 mb-1 title">Citas</h1>
+            <p class="mb-0 text-body-secondary">Informacion de la Cita</p>
+            <a href="{{ path('app_appointment_index') }}"
+               class="btn btn-link text-decoration-none"
+               aria-label="Volver al menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 1-.5.5H3.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L3.707 7.5H14.5A.5.5 0 0 1 15 8z"/>
+                </svg>
+                <span class="visually-hidden">Back to menu</span>
+            </a>
+
+
+        </div>
+
+        <nav class="d-flex gap-2">
+
+            <a class="btn btn-primary" href="{{ path('app_appointment_new') }}">
+                Nueva cita
+            </a>
+        </nav>
+    </header>
+    <section class="shadow-sm p-3 rounded-3 d-flex flex-wrap bg-white  align-items-center justify-content-between mb-3">
     <table class="table">
         <tbody>
             <tr>
@@ -37,10 +61,9 @@
             </tr>
         </tbody>
     </table>
-
-    <a href="{{ path('app_appointment_index') }}">back to list</a>
-
-    <a href="{{ path('app_appointment_edit', {'id': appointment.id}) }}">edit</a>
+    <a class="btn btn-primary" href="{{ path('app_appointment_edit', {'id': appointment.id}) }}">Editar</a>
 
     {{ include('appointment/_delete_form.html.twig') }}
+    </section>
+</div>
 {% endblock %}

@@ -34,6 +34,7 @@ public onClick() {
   ).subscribe({
     next: (user: User) => {
       // 3) comprobar rol
+      //debugger;
       if (user.roles.includes('ROLE_ADMIN')) {
         window.location.href = 'http://127.0.0.1:8000/';
         return;

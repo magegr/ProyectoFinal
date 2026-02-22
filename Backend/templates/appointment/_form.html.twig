@@ -1,4 +1,34 @@
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+<section class=" p-4 bg-white rounded-3 shadow-sm">
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+    <div class="row p-2 g-3">
+        <div class="col-12 col-md-6">
+            {{ form_row(form.name, { label: 'Nombre' }) }}
+        </div>
+
+        <div class="col-12 col-md-6">
+            {{ form_row(form.surname1, { label: 'Apellido 1' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-12 col-md-6">
+            {{ form_row(form.surname2, { label: 'Apellido 2' }) }}
+        </div>
+
+        <div class="col-12 col-md-6">
+            {{ form_row(form.type, { label: 'Tipo de visita' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-12 col-md-6">
+            {{ form_row(form.firstTime, { label: 'Primera vez?' }) }}
+        </div>
+    </div>
+    <button class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
+
+    {% if form._token is defined %}
+        {{ form_row(form._token) }}
+    {% endif %}
+
+    {{ form_end(form , {'render_rest' : false}) }}
+</section>

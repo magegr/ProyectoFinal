@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Admin;
 
 use App\Entity\Appointment;
 use App\Form\AppointmentType;
@@ -30,6 +30,7 @@ final class AppointmentController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $appointment->setAgreeTerms(true);
             $entityManager->persist($appointment);
             $entityManager->flush();
 

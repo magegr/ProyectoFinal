@@ -1,4 +1,84 @@
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+<section class=" p-4 bg-white rounded-3 shadow-sm">
+
+
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+
+    <img  style="width: 40%; height: auto;" src="{{ asset('uploads/' ~ product.image) }}" alt="Producto">
+    <div class="row p-2 g-3">
+        <div class="col-12 col-md-6">
+            {{ form_row(form.name, { label: 'Nombre' }) }}
+        </div>
+
+        <div class="col-12 col-md-6">
+            {{ form_row(form.description, { label: 'Descripcion' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-12 col-md-6">
+            {{ form_row(form.price, { label: 'Precio' }) }}
+        </div>
+
+        <div class="col-12 col-md-6">
+            {{ form_row(form.stock, { label: 'Stock' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-12 col-md-6">
+            {{ form_row(form.type, { label: 'Tipo' }) }}
+        </div>
+        <div class="col-12 col-md-6">
+            {{ form_row(form.active, { label: 'Activo' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-6">
+            {{ form_row(form.trend, { label: 'Marca' }) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(form.gender, { label: 'Genero' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-6">
+            {{ form_row(form.mount_type, { label: 'Tipo de montura' }) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(form.material, { label: 'Material' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-6">
+            {{ form_row(form.color, { label: 'Color' }) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(form.graduation, { label: 'Graduacion' }) }}
+        </div>
+    </div>
+    <div class="row p-2 g-3">
+        <div class="col-6">
+            {{ form_row(form.duration, { label: 'Duracion' }) }}
+        </div>
+
+        <div class="col-6">
+            {{ form_row(form.diameter, { label: 'Diametro' }) }}
+        </div>
+    </div>
+
+    <div class="d-flex gap-2 mt-4">
+        <button class="btn btn-primary">
+            {{ button_label|default('Guardar') }}
+        </button>
+
+    </div>
+
+
+{% if form._token is defined %}
+    {{ form_row(form._token) }}
+{% endif %}
+
+{{ form_end(form , {'render_rest' : false}) }}
+</section>

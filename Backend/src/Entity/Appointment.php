@@ -31,6 +31,7 @@ class Appointment
     #[ORM\Column]
     private ?bool $agreeTerms = null;
 
+
     #[ORM\ManyToOne(inversedBy: 'appointments')]
     private ?User $user = null;
 
