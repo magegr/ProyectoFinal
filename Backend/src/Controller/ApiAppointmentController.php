@@ -27,7 +27,10 @@ final class ApiAppointmentController extends AbstractController
                 'surname2' => $appointment->getSurname2(),
                 'firstTime' => $appointment->isFirstTime(),
                 'type' => $appointment->getType(),
-                'acceptedTerms' => $appointment->isAcceptedTerms(),
+                'acceptedTerms' => $appointment->isAgreeTerms(),
+                'phone' => $appointment->getPhone(),
+                'email' => $appointment->getEmail(),
+                'datetime' => $appointment->getDatetime()?->format('Y-m-d\TH:i')
                 //'user_id' => $appointment->getUser() ? $appointment->getUser()->getId() : null,
             ];
         }
@@ -46,6 +49,10 @@ final class ApiAppointmentController extends AbstractController
             'firstTime' => $appointment->isFirstTime(),
             'type' => $appointment->getType(),
             'acceptedTerms' => $appointment->isAgreeTerms(),
+            'phone' => $appointment->getPhone(),
+            'email' => $appointment->getEmail(),
+            'datetime' => $appointment->getDatetime()->format('Y-m-d\TH:i')
+
             /*'user' => $appointment->getUser() ? [
                 'id' => $appointment->getUser()->getId(),
                 'email' => $appointment->getUser()->getEmail(),
@@ -64,8 +71,10 @@ final class ApiAppointmentController extends AbstractController
         $appointment->setSurname2($data['surname2'] ?? null);
         $appointment->setFirstTime((bool)($data['firstTime'] ?? false));
         $appointment->setType($data['type']);
-        $appointment->setAgreeTerms((bool)($data['acceptedTerms'] ?? false));
-
+        $appointment->setAgreeTerms((bool)($data['agreeTerms'] ?? false));
+        $appointment->setPhone($data['phone'] ?? null);
+        $appointment->setEmail($data['email'] ?? '');
+        $appointment->setDatetime(new \DateTimeImmutable($data['datetime']));
 
         /*if (isset($data['user_id'])) {
             $user = $em->getRepository(User::class)->find($data['user_id']);
@@ -94,7 +103,9 @@ final class ApiAppointmentController extends AbstractController
         if (isset($data['firstTime'])) $appointment->setFirstTime((bool)$data['firstTime']);
         if (isset($data['type'])) $appointment->setType($data['type']);
         if (isset($data['acceptedTerms'])) $appointment->setAgreeTerms((bool)$data['acceptedTerms']);
-
+        if (isset($data['phone'])) $appointment->setPhone($data['phone']);
+        if (isset($data['email'])) $appointment->setEmail($data['email']);
+        if (isset($data['datetime'])) $appointment->setDatetime(new \DateTimeImmutable($data['datetime']));
         /*if (isset($data['user_id'])) {
             $user = $em->getRepository(User::class)->find($data['user_id']);
             if ($user) {

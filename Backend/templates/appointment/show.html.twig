@@ -52,6 +52,19 @@
                 <td>{{ appointment.firstTime ? 'Yes' : 'No' }}</td>
             </tr>
             <tr>
+                <th>Telephone</th>
+                <td>{{ appointment.phone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ appointment.email }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ appointment.datetime ? appointment.datetime|date('d/m/Y H:i') : '' }}</td>
+            </tr>
+
+            <tr>
                 <th>Type</th>
                 <td>{{ appointment.type }}</td>
             </tr>

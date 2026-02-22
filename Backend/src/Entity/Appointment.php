@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\AppointmentRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: AppointmentRepository::class)]
@@ -21,6 +22,16 @@ class Appointment
 
     #[ORM\Column(length: 20, nullable: true)]
     private ?string $surname2 = null;
+
+    #[ORM\Column(length: 25)]
+    private ?string $phone = null;
+
+    #[ORM\Column(length: 120)]
+    private ?string $email = null;
+
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    private ?\DateTimeImmutable $datetime = null;
+
 
     #[ORM\Column]
     private ?bool $firstTime = null;
@@ -75,6 +86,40 @@ class Appointment
 
         return $this;
     }
+
+    public function getPhone(): ?string
+    {
+        return $this->phone;
+    }
+
+    public function setPhone(?string $phone): static
+    {
+        $this->phone = $phone;
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): static
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+    public function getDatetime(): ?\DateTimeImmutable
+    {
+        return $this->datetime;
+    }
+
+    public function setDatetime(\DateTimeImmutable $datetime): static
+    {
+        $this->datetime = $datetime;
+        return $this;
+    }
+
 
     public function isFirstTime(): ?bool
     {

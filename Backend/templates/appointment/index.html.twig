@@ -36,6 +36,9 @@
                 <th>Name</th>
                 <th>Surname1</th>
                 <th>Surname2</th>
+                <th>Telephone</th>
+                <th>Email</th>
+                <th>Date</th>
                 <th>FirstTime</th>
                 <th>Type</th>
                 <th>AgreeTerms</th>
@@ -49,6 +52,9 @@
                 <td>{{ appointment.name }}</td>
                 <td>{{ appointment.surname1 }}</td>
                 <td>{{ appointment.surname2 }}</td>
+                <td>{{ appointment.phone }}</td>
+                <td>{{ appointment.email }}</td>
+                <td>{{ appointment.datetime ? appointment.datetime|date('d/m/Y H:i') : '' }}</td>
                 <td>{{ appointment.firstTime ? 'Yes' : 'No' }}</td>
                 <td>{{ appointment.type }}</td>
                 <td>{{ appointment.agreeTerms ? 'Yes' : 'No' }}</td>

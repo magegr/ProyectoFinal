@@ -1,132 +1,126 @@
 <div class="container-fluid min-vh-100 p-0">
-  <div class="row g-0 min-vh-100">
-    <div class="col-12 col-lg-12 d-flex align-items-center justify-content-center p-3 p-md-5 bg-light">
-      <div class="card shadow-sm border-0 rounded-4 w-100 login-card">
-        <div class="card-body p-4 p-md-5">
+  <div class="card shadow-sm border-0 rounded-4 w-100 login-card">
+    <div class="card-body p-4 p-md-5">
 
-          <div class="text-center mb-4">
-            <h1 class="h3 fw-bold mb-1">Benvingut/da a Òptica Adam</h1>
-            <p class="text-secondary mb-0">Ompli el formulari per a demanar cita</p>
+      <div class="text-center mb-4">
+        <h1 class="h3 fw-bold mb-1">Benvingut/da a Òptica Adam</h1>
+        <p class="text-secondary mb-0">Ompli el formulari per a demanar cita</p>
+      </div>
+
+      <form class="needs-validation" [formGroup]="form" (ngSubmit)="onSubmit($event)" novalidate>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Nom" formControlName="name" />
+          <label for="name">Nom</label>
+
+          <div class="invalid-feedback">
+            name
+          </div>
+        </div>
+
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="surname1" placeholder="Primer cognom"
+            formControlName="surname1" />
+          <label for="surname1">Primer cognom</label>
+          <div class="invalid-feedback">
+            surname1
+          </div>
+        </div>
+
+
+
+        <div class="form-floating mb-3">
+          <label class="form-label" for="surname2">Segon Cognom</label>
+          <input type="text" class="form-control" id="surname2" placeholder="Segon cognom" formControlName="surname2" />
+          <div class="invalid-feedback">
+            surname2
+          </div>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="phone" placeholder="+666 666 666 666" formControlName="phone" />
+          <label for="phone">Telèfon</label>
+          <div class="invalid-feedback">
+            phone
+          </div>
+        </div>
+
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" formControlName="email"
+            autocomplete="email" />
+          <label for="email">Correu electrònic</label>
+          <div class="invalid-feedback">
+            Introdueix un correu electrònic vàlid.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <p class="mb-2 fw-semibold">Servei</p>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="servicio" id="servicio_revision" value="revision"
+              formControlName="type" />
+            <label class="form-check-label" for="servicio_revision">Revisió</label>
           </div>
 
-          <form class="needs-validation" novalidate>
-            <div class="row g-3">
-              <div class="col-12 col-md-6 form-floating mb-3">
-                <input type="text" class="form-control" id="inputNombre" name="nombre" required minlength="2"
-                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$" placeholder="Ex.: Maria" />
-                <label for="inputNombre" class="form-label">Nom</label>
-                <div class="invalid-feedback">
-                  Escriu el teu nom (mín. 2 lletres, només lletres i espais).
-                </div>
-              </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="servicio" id="servicio_prueba" value="prueba"
+              formControlName="type" />
+            <label class="form-check-label" for="servicio_prueba">Prova de lents de contacte</label>
+          </div>
 
-              <div class="col-12 col-md-6 form-floating mb-3">
-                <input type="text" class="form-control" id="inputApellidos" name="apellidos" required minlength="2"
-                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$" placeholder="Ex.: García López" />
-                <label for="inputApellidos" class="form-label">Cognoms</label>
-                <div class="invalid-feedback">
-                  Escriu els teus cognoms (mín. 2 lletres, només lletres i espais).
-                </div>
-              </div>
-            </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="servicio" id="servicio_sol" value="sol"
+              formControlName="type" />
+            <label class="form-check-label" for="servicio_sol">Ulleres de sol</label>
+          </div>
 
-            <div class="row g-3">
-              <div class="col-12 col-md-6 form-floating mb-3">
-                <input type="text" class="form-control" id="inputPhone" name="Telefon" required minlength="2"
-                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ\\s'-]{2,}$" placeholder="+34 000 00 00 00" />
-                <label for="inputPhone" class="form-label">Telefon</label>
-                <div class="invalid-feedback">
-                  Escriu el num de telefon
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 form-floating mb-3">
-                <input type="email" class="form-control" id="email" placeholder="nom@exemple.com"
-                  formControlName="email" autocomplete="email" />
-                <label for="email">Correu electrònic</label>
-
-                <div class="invalid-feedback">
-                  Introdueix un correu electrònic vàlid.
-                </div>
-              </div>
-            </div>
-
-              <div class="row g-3 mt-1 align-items-end">
-                <div class="col-12 col-md-12">
-                  <fieldset class="border rounded-3 p-3">
-                    <legend class="float-none w-auto px-2 mb-0 fs-6">Primera cita?</legend>
-
-                    <div class="form-check mt-2">
-                      <input class="form-check-input" type="radio" name="primeraCita" id="citaSi" value="si" required />
-                      <label class="form-check-label" for="citaSi">Sí</label>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="primeraCita" id="citaNo" value="no" required />
-                      <label class="form-check-label" for="citaNo">No</label>
-                    </div>
-
-                    <div class="invalid-feedback d-block">
-                      Selecciona una opció.
-                    </div>
-                  </fieldset>
-                </div>
-              </div>
-
-              <div class="row g-3 mt-1 align-items-end">
-                <div class="col-12 col-md-12">
-                  <fieldset class="border rounded-3 p-3">
-                    <legend class="float-none w-auto px-2 mb-0 fs-6">Tipus de cita?</legend>
-
-                    <div class="form-check mt-2">
-                      <input class="form-check-input" type="radio" name="Tipo" id="citaRevision" value="revision"
-                        required />
-                      <label class="form-check-label" for="citaRevision">Revisió</label>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Tipo" id="citaLentilles" value="lentilles"
-                        required />
-                      <label class="form-check-label" for="citaLentilles">Prova de lentilles</label>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Tipo" id="citaSol" value="sol" required />
-                      <label class="form-check-label" for="citaSol">Ulleres de sol</label>
-                    </div>
-
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Tipo" id="citaTaller" value="taller"
-                        required />
-                      <label class="form-check-label" for="citaTaller">Taller</label>
-                    </div>
-
-                    <div class="invalid-feedback d-block">
-                      Selecciona una opció.
-                    </div>
-                  </fieldset>
-                </div>
-              </div>
-
-              <div class="row mt-4">
-                <div class="col-12 d-flex flex-column align-items-center gap-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="invalidCheck" required />
-                    <label class="form-check-label" for="invalidCheck">
-                      Accepte els termes i les condicions
-                    </label>
-                    <div class="invalid-feedback">
-                      Has d’acceptar abans d’enviar.
-                    </div>
-                  </div>
-
-                  <button type="submit" class="w-50 btn btn-primary px-5">Demanar cita</button>
-                </div>
-              </div>
-          </form>
-
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="servicio" id="servicio_taller" value="taller"
+              formControlName="type" />
+            <label class="form-check-label" for="servicio_taller">Taller</label>
+          </div>
         </div>
-      </div>
+        <div class="mb-2 form-check">
+          <label class="form-check-label" for="firstTime">Primera vegada?</label>
+          <input type="checkbox" class="form-check-input" id="firstTime" formControlName="firstTime"
+            autocomplete="firstTime" />
+          <div class="invalid-feedback">
+            Selecciona una opcion.
+          </div>
+        </div>
+
+
+        <div class="form-floating mb-2">
+          <input type="datetime-local" class="form-control" id="datetime" placeholder="Fecha y hora"
+            formControlName="datetime" autocomplete="off" />
+          <label for="datetime">Fecha y hora</label>
+
+          <div class="invalid-feedback">
+            Selecciona una fecha.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="terms" name="terms" required formControlName="agreeterms" />
+            <label class="form-check-label" for="agreeterms">
+              Acepto los términos y condiciones
+            </label>
+
+            <div class="invalid-feedback">
+              Debes aceptar los términos y condiciones.
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2 fw-semibold" type="submit">
+          <span>Demanar Cita</span>
+        </button>
+      </form>
+
     </div>
   </div>
 </div>
