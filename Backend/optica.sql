@@ -24,17 +24,17 @@ DROP TABLE IF EXISTS `appointment`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `appointment` (
-                               `id` int(11) NOT NULL AUTO_INCREMENT,
-                               `name` varchar(30) NOT NULL,
-                               `surname1` varchar(20) NOT NULL,
-                               `surname2` varchar(20) DEFAULT NULL,
-                               `first_time` tinyint(4) NOT NULL,
-                               `type` varchar(30) NOT NULL,
-                               `agree_terms` tinyint(4) NOT NULL,
-                               `user_id` int(11) DEFAULT NULL,
-                               PRIMARY KEY (`id`),
-                               KEY `IDX_FE38F844A76ED395` (`user_id`),
-                               CONSTRAINT `FK_FE38F844A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `surname1` varchar(20) NOT NULL,
+  `surname2` varchar(20) DEFAULT NULL,
+  `first_time` tinyint(4) NOT NULL,
+  `type` varchar(30) NOT NULL,
+  `agree_terms` tinyint(4) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_FE38F844A76ED395` (`user_id`),
+  CONSTRAINT `FK_FE38F844A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -148,18 +148,18 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
-                        `id` int(11) NOT NULL AUTO_INCREMENT,
-                        `email` varchar(180) NOT NULL,
-                        `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`roles`)),
-                        `password` varchar(255) NOT NULL,
-                        `name` varchar(30) NOT NULL,
-                        `surname1` varchar(20) NOT NULL,
-                        `surname2` varchar(20) DEFAULT NULL,
-                        `phone` varchar(10) DEFAULT NULL,
-                        `active` tinyint(4) NOT NULL,
-                        `created_at` datetime NOT NULL,
-                        PRIMARY KEY (`id`),
-                        UNIQUE KEY `UNIQ_IDENTIFIER_EMAIL` (`email`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(180) NOT NULL,
+  `roles` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`roles`)),
+  `password` varchar(255) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `surname1` varchar(20) NOT NULL,
+  `surname2` varchar(20) DEFAULT NULL,
+  `phone` varchar(10) DEFAULT NULL,
+  `active` tinyint(4) NOT NULL,
+  `created_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UNIQ_IDENTIFIER_EMAIL` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -171,8 +171,8 @@ LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `user` VALUES
-                       (1,'magegr@alumnatflorida.es','[\"ROLE_USER\"]','$2y$13$VqwzQbIVvxiHHTMsuuatpOAMIXylgS1xHqtTo1R4MLsqgrXg5DKqi','Maria','Genis',NULL,NULL,1,'2026-02-18 10:05:16'),
-                       (2,'jufeol@alumnatflorida.es','[\"ROLE_USER\"]','$2y$13$RJhKhjUvdZ3fvJb8qHpho.BvIe5c4QjSDX/KGMI38HL2ZmKZUw7BK','Justo','Fernandez',NULL,NULL,1,'2026-02-19 20:15:07');
+(1,'magegr@alumnatflorida.es','[\"ROLE_USER\"]','$2y$13$VqwzQbIVvxiHHTMsuuatpOAMIXylgS1xHqtTo1R4MLsqgrXg5DKqi','Maria','Genis',NULL,NULL,1,'2026-02-18 10:05:16'),
+(2,'jufeol@alumnatflorida.es','[\"ROLE_USER\"]','$2y$13$RJhKhjUvdZ3fvJb8qHpho.BvIe5c4QjSDX/KGMI38HL2ZmKZUw7BK','Justo','Fernandez',NULL,NULL,1,'2026-02-19 20:15:07');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
