@@ -36,23 +36,23 @@
                 <td>{{ appointment.id }}</td>
             </tr>
             <tr>
-                <th>Name</th>
+                <th>Nombre</th>
                 <td>{{ appointment.name }}</td>
             </tr>
             <tr>
-                <th>Surname1</th>
+                <th>Apellido 1</th>
                 <td>{{ appointment.surname1 }}</td>
             </tr>
             <tr>
-                <th>Surname2</th>
+                <th>Apellido 2</th>
                 <td>{{ appointment.surname2 }}</td>
             </tr>
             <tr>
-                <th>FirstTime</th>
+                <th>Primera vez</th>
                 <td>{{ appointment.firstTime ? 'Yes' : 'No' }}</td>
             </tr>
             <tr>
-                <th>Telephone</th>
+                <th>Telefono</th>
                 <td>{{ appointment.phone }}</td>
             </tr>
             <tr>
@@ -60,16 +60,16 @@
                 <td>{{ appointment.email }}</td>
             </tr>
             <tr>
-                <th>Date</th>
+                <th>Fecha</th>
                 <td>{{ appointment.datetime ? appointment.datetime|date('d/m/Y H:i') : '' }}</td>
             </tr>
 
             <tr>
-                <th>Type</th>
+                <th>Tipo</th>
                 <td>{{ appointment.type }}</td>
             </tr>
             <tr>
-                <th>AgreeTerms</th>
+                <th>Terminos y condiciones</th>
                 <td>{{ appointment.agreeTerms ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
