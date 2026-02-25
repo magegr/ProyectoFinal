@@ -23,5 +23,3 @@
 # System files
 .DS_Store
 Thumbs.db
-
-Backend/public/uploads/*
